@@ -52,6 +52,12 @@ public class MainActivity extends ActionBarActivity {
             Toast.makeText(getApplicationContext(),"Search",Toast.LENGTH_SHORT).show();
             return true;
         }
+        else if (id==R.id.action_find){
+            Toast.makeText(getApplicationContext(),"Find",Toast.LENGTH_SHORT).show();
+        }
+        else if (id==R.id.action_discover){
+            Toast.makeText(getApplicationContext(),"Discover",Toast.LENGTH_LONG).show();
+        }
 
         return super.onOptionsItemSelected(item);
     }
