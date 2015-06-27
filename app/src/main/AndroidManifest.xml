@@ -19,6 +19,19 @@
         <activity
             android:name=".SubActivity"
             android:label="@string/title_activity_sub" >
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".ThirdActivity"
+            android:label="@string/title_activity_third"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SubActivity" />
         </activity>
     </application>
 

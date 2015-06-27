@@ -1,42 +1,28 @@
 package com.exapmle.materialapplication;
 
-import android.content.Intent;
 import android.support.v4.app.NavUtils;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
 
-public class SubActivity extends ActionBarActivity {
-    Button go;
+public class ThirdActivity extends ActionBarActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sub);
-        setTitle(null);
+        setContentView(R.layout.activity_third);
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        go = (Button) findViewById(R.id.button);
-        go.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),ThirdActivity.class);
-                startActivity(intent);
-            }
-        });
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_sub, menu);
+        getMenuInflater().inflate(R.menu.menu_third, menu);
         return true;
     }
 
@@ -51,7 +37,7 @@ public class SubActivity extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-        if (id == R.id.home) {
+        else if(id == R.id.home){
             NavUtils.navigateUpFromSameTask(this);
             return true;
         }
